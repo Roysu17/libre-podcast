@@ -121,7 +121,8 @@ def play_audio_from_feed(feed_url, podcast_manager):
                 if 1 <= episode_number <= end_index:
                     selected_episode = feed.entries[episode_number - 1]
                     selected_audio_url = selected_episode.enclosures[0].href
-                    episode_progress = podcast_manager.check_existing_episode(feed.feed.title, selected_episode.title)
+                    episode_progress = podcast_manager.check_existing_episode(feed.feed.title, selected_audio_url)
+                    print("Epi progress", episode_progress)
                     if episode_progress is not None:
                         print(f"Using existing progress: {episode_progress}")
                         played_progress_bytes = download_and_play(selected_audio_url, selected_episode.title, episode_progress)
@@ -212,7 +213,7 @@ def browse_added_feeds(podcast_manager):
 
 def run_podcast_manager():
     podcast_manager = PodcastManager()
-    #podcast_manager.show_feeds()
+    podcast_manager.show_feeds()
     ssl._create_default_https_context = ssl._create_unverified_context
     
     while True:

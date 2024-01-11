@@ -117,7 +117,7 @@ class PodcastManager:
         conn.close()
 
     
-    def check_existing_episode(self, feed_title, episode_title):
+    def check_existing_episode(self, feed_title, episode_url):
         conn = sqlite3.connect(self.db_path)
         cursor = conn.cursor()
 
@@ -125,8 +125,8 @@ class PodcastManager:
             SELECT episodes.progress
             FROM episodes
             JOIN feeds ON episodes.feed_id = feeds.id
-            WHERE feeds.feed_title = ? AND episodes.episode_title = ?
-        ''', (feed_title, episode_title))
+            WHERE feeds.feed_title = ? AND episodes.episode_url = ?
+        ''', (feed_title, episode_url))
 
         progress = cursor.fetchone()
 
