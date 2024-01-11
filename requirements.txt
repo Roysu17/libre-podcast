@@ -1,0 +1,4 @@
+requests==2.26.0
+pygame==2.0.1
+feedparser==6.0.2
+validators==0.18.2

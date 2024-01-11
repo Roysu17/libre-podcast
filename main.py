@@ -1,3 +1,7 @@
+"""
+The player in Streaming_player uses ffmpeg's fplayer, need to install ffmepg for your distribution
+https://www.ffmpeg.org/download.html
+"""
 import ssl
 import feedparser
 import requests
