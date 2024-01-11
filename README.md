@@ -1,4 +1,4 @@
-# README for Libre-Podcast
+# Libre-Podcast
 
 Libre-Podcast is a terminal-based podcast app that allows you to browse and listen to your favorite podcasts directly from the command line. This alpha release provides basic functionalities to add and play podcast episodes, manage feeds, and keep track of your listening progress.
 
