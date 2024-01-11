@@ -8,6 +8,10 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+#Libre-Podcast
+saved_progress.log
+Temp_fifo
+
 # C extensions
 *.so
 
@@ -241,3 +245,4 @@ fabric.properties
 
 # Android studio 3.1+ serialized cache file
 .idea/caches/build_file_checksums.ser
+podcasts_manager.db
