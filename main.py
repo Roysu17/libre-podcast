@@ -77,7 +77,7 @@ def display_episodes(feed, start_index, num_episodes):
 
         # Get and format the publication date
         pub_date = item.published
-        formatted_pub_date = datetime.strptime(pub_date, "%a, %d %b %Y %H:%M:%S %z").strftime("%Y-%m-%d")
+        #formatted_pub_date = datetime.strptime(pub_date, "%a, %d %b %Y %H:%M:%S %z").strftime("%Y-%m-%d")
 
         # Get the iTunes episode number (if available)
         itunes_episode_number = item.get('itunes_episode', 'N/A')
@@ -86,7 +86,7 @@ def display_episodes(feed, start_index, num_episodes):
         print(f"Index Number: {idx}")
         print(f"Title: {item.title}", f", (Podcast Episode Number: {itunes_episode_number})")
         print(f"Truncated Description: {truncated_description}")
-        print(f"Publication Date: {formatted_pub_date}")
+        print(f"Publication Date: {pub_date}")
         print(f"Audio URL: {audio_url}\n")
 
     return end_index
